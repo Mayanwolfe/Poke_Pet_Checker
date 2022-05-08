@@ -108,10 +108,11 @@ class PokeInfo extends Poke {
   }
 
   locationCleanup () {
-    const words = this.locationList.join(', ').replaceAll('-',' ').split(" ");
+    const words = this.locationList.slice(0,5).join(', ').replaceAll('-',' ').split(" ");
     for (let i = 0; i < words.length; i++) {
     words[i] = words[i][0].toUpperCase() + words[i].slice(1);
     }
+    console.log(words)
     return words.join(' ')
   }
 
