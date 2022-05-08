@@ -24,6 +24,7 @@ function getFetch(){
         } else {
           let reasonStr = potentialPet.reason.join(' and ')
           decision = `This Pokemon would not be a good pet because ${reasonStr}.`
+          document.getElementById('locations').innerText = ''
         }
         document.querySelector('h2').innerText = decision
         document.querySelector('img').src = potentialPet.image
